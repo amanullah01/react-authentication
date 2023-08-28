@@ -16,6 +16,7 @@ import NewsletterPage, { action as newsletterAction } from "./pages/Newsletter";
 import AuthenticationPage, {
   action as AuthAction,
 } from "./pages/Authentication";
+import { logOutAction } from "./pages/Logout";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: "auth", element: <AuthenticationPage />, action: AuthAction },
+      { path: "logout", action: logOutAction },
       {
         path: "events",
         element: <EventsRootLayout />,
